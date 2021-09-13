@@ -1,0 +1,63 @@
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">{{ title }}</h1>
+      <h2 class="subtitle">{{ timesMoreFun }} fois plus de fun</h2>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th width="50%">Console</th>
+              <th>Ventes unitaires 2017 (en millions)</th>
+              <th>Ventes unitaires 2018 (en millions)</th>
+              <th>Ventes moyennes par semaine 2018 (en millions)</th>
+              <th>Ventes moyennes par semaine 2019 (en millions)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let gameConsole of gameConsoles">
+              <td>{{ gameConsole.name }}</td>
+              <td>{{ gameConsole.sales2017 | number }}</td>
+              <td>{{ gameConsole.sales2018 | number }}</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Display only : Do not edit below -->
+<div class class="section">
+  <div class="columns">
+    <div class="column is-6">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            La console la plus vendue entre 2017 et 2018 est la
+            {{ mostSoldGameConsole ? mostSoldGameConsole.name : '-' }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="column is-6">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            La console la plus vendue entre 2017 et 2018 est la
+            {{ lessSoldGameConsole ? lessSoldGameConsole.name : '-' }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
