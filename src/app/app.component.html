@@ -26,8 +26,8 @@
               <td>{{ gameConsole.name }}</td>
               <td>{{ gameConsole.sales2017 | number }}</td>
               <td>{{ gameConsole.sales2018 | number }}</td>
-              <td>-</td>
-              <td>-</td>
+              <td>{{ gameConsole.salesperWeek2018 | number }}</td>
+              <td>{{ gameConsole.salesperWeek2019 | number }}</td>
             </tr>
           </tbody>
         </table>
@@ -44,7 +44,7 @@
         <div class="card-content">
           <p class="title">
             La console la plus vendue entre 2017 et 2018 est la
-            {{ mostSoldGameConsole ? mostSoldGameConsole.name : '-' }}
+            {{mostSoldGameConsole}}
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@
         <div class="card-content">
           <p class="title">
             La console la plus vendue entre 2017 et 2018 est la
-            {{ lessSoldGameConsole ? lessSoldGameConsole.name : '-' }}
+            {{lessSoldGameConsole}}
           </p>
         </div>
       </div>
